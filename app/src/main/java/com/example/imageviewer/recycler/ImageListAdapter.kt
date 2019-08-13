@@ -1,4 +1,4 @@
-package com.example.imageviewer
+package com.example.imageviewer.recycler
 
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ class ImageListAdapter (val data: MutableList<ImageListAdapter>) :
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageListAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
@@ -19,7 +19,7 @@ class ImageListAdapter (val data: MutableList<ImageListAdapter>) :
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onBindViewHolder(holder: ImageListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

@@ -1,14 +1,13 @@
-package com.example.imageviewer
+package com.example.imageviewer.activities
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
+import com.example.imageviewer.R
+import com.example.imageviewer.model.ImageData
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.ArrayList
-import java.util.jar.Attributes
 
 class MainActivity : AppCompatActivity() {
 

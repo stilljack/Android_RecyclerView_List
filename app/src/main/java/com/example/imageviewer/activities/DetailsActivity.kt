@@ -1,10 +1,8 @@
-package com.example.imageviewer
+package com.example.imageviewer.activities
 
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.net.toUri
-import kotlinx.android.synthetic.main.activity_details.*
+import com.example.imageviewer.R
 
 class DetailsActivity : AppCompatActivity() {
 
