@@ -5,45 +5,25 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DetailsActivity">
+        tools:context=".DetailsActivity"
+        android:id="@+id/cl_edit"
+>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".DetailsView">
+    <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/android"
+            app:layout_constraintLeft_toLeftOf="parent"
+    />
+    <TextView
+            android:id="@+id/Image_title"
+            android:text="Movie Title"
+            app:layout_constraintTop_toBottomOf="@id/img"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:ignore="MissingConstraints" android:autofillHints="Movie Title"/>
 
-        <com.google.android.material.appbar.AppBarLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:theme="@style/AppTheme.AppBarOverlay">
 
-            <androidx.appcompat.widget.Toolbar
-                    android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    android:background="?attr/colorPrimary"
-                    app:popupTheme="@style/AppTheme.PopupOverlay"/>
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <include layout="@layout/content_details_view" android:id="@+id/include"/>
-        <ImageView
-                android:id="@+id/detail_image_display"
-                android:layout_width="202dp"
-                android:layout_height="304dp"
-                android:setImageURI=""
-                android:baselineAlignBottom="@android:"
-                app:layout_anchorGravity="start|center" app:layout_anchor="@+id/include"/>
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:layout_margin="@dimen/fab_margin"
-                app:srcCompat="@android:drawable/ic_dialog_email"/>
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
