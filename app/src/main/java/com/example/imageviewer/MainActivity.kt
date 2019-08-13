@@ -43,20 +43,17 @@ class MainActivity : AppCompatActivity() {
         val view = TextView(this)
         view.text = string
         view.textSize = 24f
+        view.setOnClickListener {  }
         return view
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-
-        val fullPhotoUri = data!!.data
-
-        if (fullPhotoUri != null) {
-            imageList.add(ImageData(fullPhotoUri))
-            //stealing a bit, this is probably a terrible way to do it
-            val path = fullPhotoUri.path!!.split("/".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
-            picture_linear_layout.addView(createTextView(path[path.size - 1], index))
+        if (data != null) {
+        val photoUri = data.data
+        val path = photoUri!!.path!!.split("/".toRegex()).dropLastWhile{it.isEmpty()}.toTypedArray()
+        picture_linear_layout.addView(createTextView(path[path.size - 1],path.size))
+        imageList.add(ImageData(path[path.size - 1], photoUri))
         }
-
 
         super.onActivityResult(requestCode, resultCode, data)
     }
