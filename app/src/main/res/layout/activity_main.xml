@@ -22,12 +22,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-
+            <ImageView
+                    android:id="@+id/imgMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/android"
+                    app:layout_constraintLeft_toLeftOf="parent"
+            />
             <TextView
                     android:id="@+id/text_display"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="defaault"
+                    android:text="placeholder"
                     android:textSize="24dp"
                     android:textAlignment="center"
             />
